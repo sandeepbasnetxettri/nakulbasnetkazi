@@ -8,6 +8,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+
+
   <!-- Favicons -->
   <link href="assets/img/1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -34,6 +37,23 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    button {
+    background-color: #2196F3; /* Blue color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+}
+
+  </style>
 </head>
 
 <body class="index-page">
@@ -303,7 +323,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="sendMessageBtn">Send Message</button>
                 </div>
 
               </div>
@@ -353,6 +373,15 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sendMessageBtn = document.getElementById("sendMessageBtn");
+      sendMessageBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Message sent!");
+      });
+    });
+  </script>
 
 </body>
 
